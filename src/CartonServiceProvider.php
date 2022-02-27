@@ -2,9 +2,9 @@
 
 namespace Brandonjjon\Carton;
 
+use Brandonjjon\Carton\Commands\CartonCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Brandonjjon\Carton\Commands\CartonCommand;
 
 class CartonServiceProvider extends PackageServiceProvider
 {

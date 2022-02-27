@@ -2,9 +2,9 @@
 
 namespace Brandonjjon\Carton\Tests;
 
+use Brandonjjon\Carton\CartonServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Brandonjjon\Carton\CartonServiceProvider;
 
 class TestCase extends Orchestra
 {
