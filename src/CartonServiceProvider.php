@@ -17,9 +17,10 @@ class CartonServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('carton')
-            ->hasConfigFile()
+            ->hasConfigFile(['carton', 'github'])
             ->hasViews()
             ->hasMigration('create_carton_table')
-            ->hasCommand(CartonCommand::class);
+            ->hasCommand(CartonCommand::class)
+            ->hasRoute('admin');
     }
 }

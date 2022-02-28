@@ -6,14 +6,18 @@ use Illuminate\Console\Command;
 
 class CartonCommand extends Command
 {
-    public $signature = 'carton';
+    public $signature = 'carton:install';
 
-    public $description = 'My command';
+    public $description = 'Publishes the config';
 
-    public function handle(): int
+    public function handle()
     {
-        $this->comment('All done');
+        
+        $this->callSilent('vendor:publish', ['--tag' => 'carton-config', '--tag' => 'carton-views']);
+        $this->info('[Carton] was installed successfully.');
 
-        return self::SUCCESS;
+        // $this->comment('All done');
+
+        // return self::SUCCESS;
     }
 }
