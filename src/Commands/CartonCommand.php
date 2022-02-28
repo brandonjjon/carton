@@ -12,7 +12,6 @@ class CartonCommand extends Command
 
     public function handle()
     {
-        
         $this->callSilent('vendor:publish', ['--tag' => 'carton-config', '--tag' => 'carton-views']);
         $this->info('[Carton] was installed successfully.');
 
